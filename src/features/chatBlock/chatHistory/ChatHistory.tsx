@@ -14,7 +14,7 @@ const ChatHistory = ({reset}: PropsType) => {
         const fetchChatHistory = () => {
             dispatch(getChatHistory({phone}));
         };
-        const interval = setInterval(fetchChatHistory, 30000);
+        const interval = setInterval(fetchChatHistory, 10000);
         return () => {
             clearInterval(interval);
         };
