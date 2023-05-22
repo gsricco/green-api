@@ -1,0 +1,23 @@
+@import "./variables";
+
+@mixin container(){
+  width: 1440px;
+  height: 865px;
+  border-radius: 12px;
+}
+
+@mixin flex($flexDirection:row, $flexWrap:nowrap, $alignContent:center,$justifyContent:center,$alignItems:center){
+  display: flex;
+  flex-direction: $flexDirection;
+  flex-wrap: $flexWrap;
+  align-content: $alignContent;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin chatMsg() {
+  width: 300px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  padding: 10px;
+}

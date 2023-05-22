@@ -1,0 +1,15 @@
+@import "src/assets/styles/sass/variables";
+@import "src/assets/styles/sass/mixins";
+
+.app {
+  @include flex();
+  width: 100vw;
+  min-height: 100vh;
+  background: $containerColor;
+  margin: auto;
+  padding: 20px;
+
+  .containerApp {
+    @include container();
+  }
+}

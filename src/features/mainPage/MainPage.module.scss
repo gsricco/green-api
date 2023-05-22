@@ -1,0 +1,97 @@
+@import "src/assets/styles/sass/variables";
+@import "src/assets/styles/sass/mixins";
+
+.main {
+  @include flex(row, nowrap, center, space-between, flex-start);
+
+  .headerUserData {
+    margin-top: 10px;
+    width: 540px;
+    height: 60px;
+    background: $headerUserColor;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 20%), -1px -1px 2px rgb(0 0 0 / 20%);
+
+    .userData {
+      @include flex(row, nowrap, center, space-between, center);
+
+      .userDataItem {
+        color: $alternativeTextColor;
+        font-size: 12px;
+        padding: 10px;
+
+        & span {
+          color: $textSecondColor;
+        }
+      }
+
+      & button {
+        margin-right: 10px;
+        color: $alternativeTextColor;
+
+        &:hover {
+          color: $textColor
+        }
+      }
+    }
+
+    .userDataItem {
+      color: $alternativeTextColor;
+      font-size: 12px;
+      padding: 0 10px;
+
+      & span {
+        color: $textSecondColor;
+      }
+    }
+  }
+
+  .accordionBlock {
+    width: 540px;
+    background: $alternativeTextColor;
+    color: $textColor;
+
+    .accordionItem {
+      .accordionItem {
+        width: 500px;
+      }
+    }
+  }
+
+  .chatBlock {
+    @include flex(row, wrap, center, space-between, center);
+    width: 850px;
+    min-height: 60px;
+    border-radius: 8px;
+    background: $chatColor;
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 20%), -1px -1px 2px rgb(0 0 0 / 20%);
+    margin-top: 10px;
+    .headerMessage{
+      @include flex(row, wrap, center, flex-start, center);
+      padding: 0 10px;
+      width: 100%;
+      height: 60px;
+      border-radius: 8px 8px 0 0;
+      background: $headerUserColor;
+      color:$alternativeTextColor;
+    }
+    .chatMessage {
+      width: 830px;
+      max-height: 595px;
+      padding: 10px;
+      overflow-x: hidden;
+      scroll-snap-type: y mandatory;
+
+    }
+
+    .sendMessage {
+      @include flex();
+      padding: 10px;
+      margin-top: 40px;
+      width: 850px;
+      .textMessage{
+        width: 100%;
+      }
+    }
+  }
+}

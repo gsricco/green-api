@@ -1,0 +1,22 @@
+@import "../../../assets/styles/sass/variables";
+@import "../../../assets/styles/sass/mixins";
+
+.chatMap{
+  @include flex(column-reverse, wrap, center, space-between, center);
+
+    .chatMapItemLeft{
+      @include chatMsg();
+      text-align: left;
+      background: $alternativeTextColor;
+      margin: 5px 520px 0 30px;
+      color:$textColor
+    }
+
+    .chatMapItemRight{
+      @include chatMsg();
+      text-align: right;
+      background: $headerColor;
+      margin: 5px 15px 0 520px ;
+      color:$alternativeTextColor;
+    }
+}

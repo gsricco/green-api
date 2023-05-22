@@ -2,10 +2,11 @@ import {ActionCreatorsMapObject, bindActionCreators, combineReducers, configureS
 import thunkMiddleware from "redux-thunk";
 import {useAppDispatch} from "../hooks/hooks";
 import {useMemo} from "react";
+import {green} from "../features/mainPage/green-reducer";
 
 
 const rootReducer = combineReducers({
-
+    green,
 })
 
 export const store = configureStore({

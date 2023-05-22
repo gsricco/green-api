@@ -1,0 +1,12 @@
+@import "src/assets/styles/sass/variables";
+@import "src/assets/styles/sass/mixins";
+
+.header{
+  @include flex();
+  width: 1440px;
+  height: 60px;
+  border-radius: 8px 8px 0 0;
+  background: $headerColor;
+  color:$alternativeTextColor;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 20%), -1px -1px 2px rgb(0 0 0 / 20%);
+}
