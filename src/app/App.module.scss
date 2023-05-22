@@ -11,5 +11,6 @@
 
   .containerApp {
     @include container();
+    background: $pagesColor;
   }
 }
